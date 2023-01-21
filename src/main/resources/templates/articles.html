@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1 align="center">Recherche</h1>
+<center>
+<input type="text" value="Recherche ...">
+    <button type="submit" > Recherche </button>
+</center>
+<br/>
+<br/>
+<br/>
+<center>
+<table >
+    <thead>
+    <h2> Articles </h2>
+    </thead>
+    <tbody>
+    <tr th:each="a:${listeArticles}">
+        <td>
+            <span href="" th:text="${a.getTitle()}"> Titre </span>
+            <span th:text="${a.getAuthor()}"> author </span>
+        </td>
+    </tr>
+    </tbody>
+</center>
+</table>
+
+
+</body>
+</html>
